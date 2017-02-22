@@ -10,9 +10,6 @@ const PATHS_CONFIG = require('./config/PATHS.js'),
     BUILD_CONFIG = require('./config/BUILD.js'),
     WEBPACK_DEV_CONFIG = require('./webpack.dev.conf.js');
 
-/*const config = require('./config/index.js'),
-    webpackDevConfig = require('./webpack.dev.config.js');*/
-
 /* Express DEV Server port */
 var port = process.env.PORT || PORTS_CONFIG.DEV_SERVER;
 
