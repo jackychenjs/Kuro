@@ -4,7 +4,7 @@ const PATHS_CONFIG = require('./config/PATHS.js');
 
 module.exports = {
     entry: {
-        app: PATHS_CONFIG.SRC.pathJoin('main.js'),
+        app: PATHS_CONFIG.SRC.pathJoin('index.js'),
     },
     output: {
         path: PATHS_CONFIG.DIST.pathJoin('static'),
