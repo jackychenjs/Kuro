@@ -1,30 +1,29 @@
-/*body {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 14px;
-  line-height: 1.42857;
-  color: #34495e;
-  background-color: #fff; }*/
+/**
+ * Name: Common Style
+ * Author: Jacky_cjs
+ */
 
-body {
-    padding: 0px !important;
-    margin: 0px !important;
-    font-family: Helvetica, Arial, "Microsoft YaHei", sans-serif;
-    font-size: 14px;
-    /*color: #333333;*/
-    color: #34495e;
-    /*direction: "ltr";*/
-}
-
+// Static Variable
 $miku-color: #39C5BB;
 $rin-color: #FFA500;
 $ren-color: #FFE212;
 $luka-color: #FFBFCB;
 $meiko-color: #D80000;
 $kaito-color: #0000FF;
+
+// Common Css Module
+body {
+    padding: 0px !important;
+    margin: 0px !important;
+    color: #34495e;
+    font-family: Helvetica, Arial, "Microsoft YaHei", sans-serif;
+    font-size: 14px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
 .clearfix {
     clear: both;
 }
-
 .clearfix:after {
     content: '';
     display: table;
