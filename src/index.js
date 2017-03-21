@@ -5,11 +5,12 @@ import App from './App'
 import router from './router'
 
 import 'assets/scss/common.scss'
+import 'assets/css/reset.css'
 
 /* eslint-disable no-new */
 new Vue({
-    el: '#app',
+    //el: '#app',
     router,
     template: '<App/>',
     components: { App }
-})
+}).$mount('#app')
