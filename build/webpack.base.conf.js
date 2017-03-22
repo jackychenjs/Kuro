@@ -1,4 +1,4 @@
-const webpack = require('webpack');
+const ENV = process.env.NODE_ENV
 
 const PATHS_CONFIG = require('./config/PATHS.js');
 
@@ -12,7 +12,7 @@ module.exports = {
         publicPath: '/'
     },
     resolve: {
-        extensions: ['.js', '.vue'],
+        extensions: ['.js', '.vue', '.less', '.css', '.scss'],
         modules: [
             PATHS_CONFIG.NODE_MODULES,
             PATHS_CONFIG.SRC
