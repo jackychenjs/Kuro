@@ -40,10 +40,10 @@ export default {
 
 <style lang='sass'>
 	html, body {
-	margin: 0;
-	padding: 0;
-	height: 100%;
-	overflow: hidden;
+		margin: 0;
+		padding: 0;
+		height: 100%;
+		overflow: hidden;
 	}
 
 	body {
