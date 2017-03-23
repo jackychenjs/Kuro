@@ -16,13 +16,17 @@ var port = process.env.PORT || PORTS_CONFIG.DEV_SERVER;
 /* Automatically open browser */
 var autoOpenBrowser = !!BUILD_CONFIG.dev.autoOpenBrowser;
 
-var app = express(),
-    compiler = webpack(WEBPACK_DEV_CONFIG);
+var app = express();
+var compiler = webpack(WEBPACK_DEV_CONFIG);
 
 var devMiddleware = webpackDevMiddleware(compiler, {
-    noInfo: true,
     publicPath: WEBPACK_DEV_CONFIG.output.publicPath,
-    quiet: true
+    noInfo: true,
+    quiet: true,
+    stats: {
+        colors: true,
+        chunks: false
+    }
 });
 
 var hotMiddleware = webpackHotMiddleware(compiler);

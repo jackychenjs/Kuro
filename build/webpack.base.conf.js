@@ -8,8 +8,8 @@ module.exports = {
     },
     output: {
         path: PATHS_CONFIG.DIST.pathJoin('static'),
-        filename: '[name].js',
-        publicPath: '/'
+        filename: '[name].js'
+        //publicPath: '/'
     },
     resolve: {
         extensions: ['.js', '.vue', '.less', '.css', '.scss'],
