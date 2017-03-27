@@ -1,11 +1,11 @@
 <template>
-	<div>
-		<canvas id="bg"></canvas>
-	</div>
+	<canvas id="bg"></canvas>
 </template>
 
 <style>
-	
+	#bg {
+		position: absolute;
+	}
 </style>
 
 <script>
@@ -107,7 +107,7 @@
 
 								ctx.beginPath();
 								ctx.lineWidth = ratio / 2;
-								ctx.strokeStyle = 'rgba(256, 256, 256,' + (ratio + 0.2) + ')';
+								ctx.strokeStyle = 'rgba(204, 204, 204,' + (ratio + 0.2) + ')';
 								ctx.moveTo(dot.x, dot.y);
 								ctx.lineTo(d2.x, d2.y);
 								ctx.stroke();

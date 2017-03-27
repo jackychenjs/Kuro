@@ -1,7 +1,7 @@
 <template>
   	<div>
-    	<starsBg father-component="home"></starsBg>
 		<div class="metro-wrap">
+    		<starsBg></starsBg>
 			<div class="metro-line">
 				<div class="metro-block item red">Profile</div>
 				<div class="metro-block item blue">Demo</div>
@@ -16,7 +16,6 @@
 				<div class="metro-block item yellow">Gallery</div>
 			</div>
 		</div>
-		<router-view></router-view>
   	</div>
 </template>
 
@@ -54,9 +53,10 @@ export default {
 		position: absolute;  
 		top: 0; left: 0; bottom: 0; right: 0;  
 		.metro-line {
+			position: relative;
 			display: flex;
 			justify-content: center;
-			margin: 5px 0;
+			padding: 5px 0;
 			.metro-block {
 				display: flex;
 				flex-wrap: wrap;
