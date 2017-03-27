@@ -5,15 +5,13 @@
 </template>
 
 <style>
-	#bg {
-		display: none;
-	}
+	
 </style>
 
 <script>
 	export default {
 		mounted() {
-			//this.initStarsCanvas();
+			this.initStarsCanvas();
 		},
 
 		methods: {

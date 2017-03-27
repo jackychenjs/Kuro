@@ -3,17 +3,17 @@
     	<starsBg father-component="home"></starsBg>
 		<div class="metro-wrap">
 			<div class="metro-line">
-				<div class="metro-block item">1</div>
-				<div class="metro-block item">2</div>
+				<div class="metro-block item red">Profile</div>
+				<div class="metro-block item blue">Demo</div>
 			</div>
 			<div class="metro-line">
 				<div class="metro-block">
-					<div class="metro-block item small">3-1</div>
-					<div class="metro-block item small">3-2</div>
-					<div class="metro-block item small">3-3</div>
-					<div class="metro-block item small">3-4</div>
+					<div class="metro-block item small green">Tools</div>
+					<div class="metro-block item small purple">Memo</div>
+					<div class="metro-block item small pink">Undifined</div>
+					<div class="metro-block item small cyan"></div>
 				</div>
-				<div class="metro-block item">4</div>
+				<div class="metro-block item yellow">Gallery</div>
 			</div>
 		</div>
 		<router-view></router-view>
@@ -66,14 +66,35 @@ export default {
 				width: 350px;
 				height: 200px;
 				&.item {
+					background-color: rgba(50,50,50,0.6);
 					color: #fff;
-					box-shadow: 0px 0px 0px 1px rgba(255, 255, 255, 0.3) inset;
 					border-radius: 3px;
 					transition: transform .2s linear;
 					&:hover {
-						box-shadow: 0px 0px 0px 3px rgba(255, 0, 51, 0.5) inset;
 						transform: scale(1.02);
 					}
+					&.red:hover {
+						background-color: rgba(255, 0, 51, 0.3); //FF0033
+					}
+					&.yellow:hover {
+						background-color: rgba(255,204,153, 0.3); //FFCC99
+					}
+					&.blue:hover {
+						background-color: rgba(0,153,204, 0.3); //0099CC
+					}
+					&.green:hover {
+						background-color: rgba(153,204,51, 0.3); //99CC33
+					}
+					&.purple:hover {
+						background-color: rgba(153,51,204, 0.3); //9933CC
+					}
+					&.pink:hover {
+						background-color: rgba(255,153,204, 0.3); //FF99CC
+					}
+					&.cyan:hover {
+						background-color: rgba(204,255,255, 0.3); //CCFFFF
+					}
+					
 				}
 				&.small {
 					margin: 0;
