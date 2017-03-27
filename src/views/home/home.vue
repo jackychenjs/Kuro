@@ -33,14 +33,8 @@ export default {
 </script>
 
 <style lang='sass'>
-	html, body {
-		margin: 0;
-		padding: 0;
-		height: 100%;
-		overflow: hidden;
-	}
-
 	body {
+		overflow: hidden;
 		background-color: rgb(33, 33, 33);
 	}
 
