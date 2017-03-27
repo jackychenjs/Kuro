@@ -15,6 +15,10 @@ var webpackConfig = merge(WEBPACK_BASE_CONFIG, {
 			sourceMap: config.build.cssSourceMap,
 			extract: true
 		})
+	},
+	output: {
+		path: PATHS_CONFIG.DIST.pathJoin('static'),
+        filename: '[name].js'
 	}
 });
 

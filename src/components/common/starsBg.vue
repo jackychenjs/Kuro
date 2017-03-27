@@ -5,7 +5,9 @@
 </template>
 
 <style>
-	
+	#bg {
+		display: none;
+	}
 </style>
 
 <script>
