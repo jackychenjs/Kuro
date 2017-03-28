@@ -3,17 +3,17 @@
 		<div class="metro-wrap">
     		<starsBg></starsBg>
 			<div class="metro-line">
-				<div class="metro-block item red">Profile</div>
-				<div class="metro-block item blue">Demo</div>
+				<router-link to="profile" class="metro-block item red">Profile</router-link>
+				<router-link to="demo" class="metro-block item blue">Demo</router-link>
 			</div>
 			<div class="metro-line">
 				<div class="metro-block">
-					<div class="metro-block item small green">Tools</div>
-					<div class="metro-block item small purple">Memo</div>
-					<div class="metro-block item small pink">Undifined</div>
-					<div class="metro-block item small cyan"></div>
+					<router-link to="tools" class="metro-block item small green">Tools</router-link>
+					<router-link to="memo" class="metro-block item small purple">Memo</router-link>
+					<router-link to="un" class="metro-block item small pink">Undifined</router-link>
+					<router-link to="un" class="metro-block item small cyan"></router-link>
 				</div>
-				<div class="metro-block item yellow">Gallery</div>
+				<router-link to="gallery" class="metro-block item yellow">Gallery</router-link>
 			</div>
 		</div>
   	</div>
