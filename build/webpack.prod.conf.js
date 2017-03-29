@@ -1,5 +1,6 @@
 const webpack = require('webpack')
 const merge = require('webpack-merge')
+const utils = require('./utils')
 const htmlWebpackPlugin = require('html-webpack-plugin')
 const extractTextPlugin = require('extract-text-webpack-plugin')
 const friendlyErrorsPlugins = require('friendly-errors-webpack-plugin')
@@ -11,7 +12,7 @@ const WEBPACK_BASE_CONFIG = require('./webpack.base.conf')
 
 var webpackConfig = merge(WEBPACK_BASE_CONFIG, {
 	module: {
-		loaders: urils.styleLoaders({
+		loaders: utils.styleLoaders({
 			sourceMap: config.build.cssSourceMap,
 			extract: true
 		})
@@ -19,7 +20,12 @@ var webpackConfig = merge(WEBPACK_BASE_CONFIG, {
 	output: {
 		path: PATHS_CONFIG.DIST.pathJoin('static'),
         filename: '[name].js'
-	}
+	},
+	plugins: [
+		new extractTextPlugin({
+			
+		})
+	]
 });
 
 
