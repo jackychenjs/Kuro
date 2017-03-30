@@ -68,25 +68,25 @@ export default {
 						transform: scale(1.02);
 					}
 					&.red:hover {
-						background-color: rgba(255, 0, 51, 0.3); //FF0033
+						background-color: rgba(255, 0, 51, 0.3); /*FF0033*/
 					}
 					&.yellow:hover {
-						background-color: rgba(255,204,153, 0.3); //FFCC99
+						background-color: rgba(255,204,153, 0.3); /*FFCC99*/
 					}
 					&.blue:hover {
-						background-color: rgba(0,153,204, 0.3); //0099CC
+						background-color: rgba(0,153,204, 0.3); /*0099CC*/
 					}
 					&.green:hover {
-						background-color: rgba(153,204,51, 0.3); //99CC33
+						background-color: rgba(153,204,51, 0.3); /*99CC33*/
 					}
 					&.purple:hover {
-						background-color: rgba(153,51,204, 0.3); //9933CC
+						background-color: rgba(153,51,204, 0.3); /*9933CC*/
 					}
 					&.pink:hover {
-						background-color: rgba(255,153,204, 0.3); //FF99CC
+						background-color: rgba(255,153,204, 0.3); /*FF99CC*/
 					}
 					&.cyan:hover {
-						background-color: rgba(204,255,255, 0.3); //CCFFFF
+						background-color: rgba(204,255,255, 0.3); /*CCFFFF*/
 					}
 					
 				}

@@ -2,18 +2,12 @@
 	<canvas id="bg"></canvas>
 </template>
 
-<style>
-	#bg {
-		position: absolute;
-	}
-</style>
-
 <script>
 	export default {
+		name: 'starsbg',
 		mounted() {
 			this.initStarsCanvas();
 		},
-
 		methods: {
 			initStarsCanvas() {
 				var canvas = document.getElementById("bg");
@@ -123,3 +117,9 @@
 		}
 	}
 </script>
+
+<style>
+	#bg {
+		position: absolute;
+	}
+</style>

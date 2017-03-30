@@ -1,5 +1,8 @@
+process.env.NODE_ENV = 'production'
+
 const ora = require('ora')
 const rm = require('rimraf')
+var path = require('path')
 const webpack = require('webpack')
 
 const BUILD_CONFIG = require('./config/BUILD.js')

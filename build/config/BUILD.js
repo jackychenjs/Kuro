@@ -4,9 +4,10 @@ const PATHS_CONFIG = require('./PATHS.js');
 module.exports = {
     build: {
         env: {NODE_ENV: '"production"'},
+        index: path.join(PATHS_CONFIG.DIST, 'index.html'),
         assetsRoot: PATHS_CONFIG.DIST,
         assetsSubDirectory: 'static',
-        cssSourceMap: false
+        productionSourceMap: true
     },
     dev: {
         env: {NODE_ENV: '"development"'},
