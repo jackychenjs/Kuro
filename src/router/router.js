@@ -17,12 +17,12 @@ export default [{
         {
             path: '/home',
             component: home
+        },
+        // my profile page
+        {
+            path: '/profile',
+            component: profile
         }
-        // // my profile page
-        // {
-        //     path: '/profile',
-        //     component: profile
-        // },
         // // gallary page
         // {
         //     path: '/gallary',
