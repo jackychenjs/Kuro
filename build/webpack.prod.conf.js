@@ -6,22 +6,20 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin')
 const friendlyErrorsPlugins = require('friendly-errors-webpack-plugin')
 
+const { pathsConfig, buildConfig } = require('../config')
+const webpackBaseConfig = require('./webpack.base.conf')
 const utils = require('./utils')
-const BUILD_CONFIG = require('./config/BUILD.js')
-const PATHS_CONFIG = require('./config/PATHS.js')
-const WEBPACK_BASE_CONFIG = require('./webpack.base.conf')
 
-
-var webpackConfig = merge(WEBPACK_BASE_CONFIG, {
+var webpackConfig = merge(webpackBaseConfig, {
 	module: {
 		loaders: utils.styleLoaders({
-			sourceMap: BUILD_CONFIG.build.productionSourceMap,
+			sourceMap: buildConfig.build.productionSourceMap,
 			extract: true
 		})
 	},
-	devtool: BUILD_CONFIG.build.productionSourceMap ? '#source-map' : false,
+	devtool: buildConfig.build.productionSourceMap ? '#source-map' : false,
 	output: {
-		path: PATHS_CONFIG.DIST,
+		path: pathsConfig.DIST,
 		filename: utils.assetsPath('js/[name].[chunkhash].js'),
 		chunkFilename: utils.assetsPath('js/[id].[chunkhash].js')
 	},
@@ -41,8 +39,8 @@ var webpackConfig = merge(WEBPACK_BASE_CONFIG, {
 		}),
 		new OptimizeCSSPlugin(),
 		new HtmlWebpackPlugin({
-			filename: BUILD_CONFIG.build.index,
-			template: PATHS_CONFIG.SRC.pathJoin('index.html'),
+			filename: buildConfig.build.index,
+			template: pathsConfig.SRC.pathJoin('index.html'),
 			inject: true,
 			chunsSortMode: 'dependency'
 		}),

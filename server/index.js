@@ -1,5 +1,7 @@
 const express = require('express')
+const {buildConfig, pathsConfig, portsConfig} = require('../config')
 const route = require('./route/route')
+const logger = require('./util/logger')
 
 var app = express()
 
@@ -7,7 +9,12 @@ app.use('/static', express.static('static'))
 
 app.use('/', route)
 
-app.listen(3000);
+
+app.listen(portsConfig.PRO_SERVER, function () {
+  logger.info('Jacky Server listening on port', portsConfig.PRO_SERVER)
+  logger.info('Tell Your World!!...')
+  logger.info('')
+});
 
 
 /*

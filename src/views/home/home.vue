@@ -1,22 +1,20 @@
 <template>
-  	<div>
-		<div class="metro-wrap">
-    		<starsBg></starsBg>
-			<div class="metro-line">
-				<router-link to="profile" class="metro-block item red">Profile</router-link>
-				<router-link to="demo" class="metro-block item blue">Demo</router-link>
-			</div>
-			<div class="metro-line">
-				<div class="metro-block">
-					<router-link to="tools" class="metro-block item small green">Tools</router-link>
-					<router-link to="memo" class="metro-block item small purple">Memo</router-link>
-					<router-link to="un" class="metro-block item small pink">Undifined</router-link>
-					<router-link to="un" class="metro-block item small cyan"></router-link>
-				</div>
-				<router-link to="gallery" class="metro-block item yellow">Gallery</router-link>
-			</div>
+	<div class="metro-wrap">
+		<starsBg></starsBg>
+		<div class="metro-line">
+			<router-link to="profile" class="metro-block item red">Profile</router-link>
+			<router-link to="demo" class="metro-block item blue">Demo</router-link>
 		</div>
-  	</div>
+		<div class="metro-line">
+			<div class="metro-block">
+				<router-link to="tools" class="metro-block item small green">Gallery</router-link>
+				<router-link to="memo" class="metro-block item small purple">Memo</router-link>
+				<router-link to="game" class="metro-block item small pink">Game</router-link>
+				<router-link to="un" class="metro-block item small cyan">Blank</router-link>
+			</div>
+			<router-link to="gallery" class="metro-block item yellow">Tool</router-link>
+		</div>
+	</div>
 </template>
 
 <script>
@@ -45,7 +43,8 @@ export default {
 		align-items: center;
 		margin: auto;  
 		position: absolute;  
-		top: 0; left: 0; bottom: 0; right: 0;  
+		top: 0; left: 0; bottom: 0; right: 0;
+		min-height: 420px;
 		.metro-line {
 			position: relative;
 			display: flex;

@@ -1,18 +1,17 @@
 const express = require('express')
-const fs = require('fs')
 const path = require('path')
 
-const router = express.Router()
+const apiController = require('../controller/api')
 
-const getCloudMusic = require('../controller/getCloudMusic');
+const router = express.Router()
 
 router.get('/', function(req, res, next) {
     res.sendFile(path.join(__dirname, '../index.html'));
 })
 
-router.post('/api/getCloudMusic', function() {
-    getCloudMusic();
-})
+router.post('/api/cloudmusic/search', apiController.search)
+router.post('/api/cloudmusic/lyric', apiController.lyric)
+router.post('/api/cloudmusic/ttlyric', apiController.ttlyric)
 
 //var viewPath = path.join(__dirname, 'views');
 
@@ -39,6 +38,5 @@ router.post('/api/getCloudMusic', function() {
 //     //console.log(dataModule);
 //     Action.excute(req, res);
 // });
-
 
 module.exports = router;

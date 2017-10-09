@@ -1,13 +1,14 @@
 const path = require('path')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 
-const BUILD_CONFIG = require('./config/BUILD.js');
-const PATHS_CONFIG = require('./config/PATHS.js');
+// const buildConfig = require('./config/BUILD.js')
+// const pathsConfig = require('./config/PATHS.js')
+const { pathsConfig, buildConfig } = require('../config')
 
 exports.assetsPath = function (_path) {
   var assetsSubDirectory = process.env.NODE_ENV === 'production'
-    ? BUILD_CONFIG.build.assetsSubDirectory
-    : BUILD_CONFIG.dev.assetsSubDirectory
+    ? buildConfig.build.assetsSubDirectory
+    : buildConfig.dev.assetsSubDirectory
   return path.posix.join(assetsSubDirectory, _path)
 }
 
