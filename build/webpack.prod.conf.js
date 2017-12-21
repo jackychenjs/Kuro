@@ -40,7 +40,7 @@ var webpackConfig = merge(webpackBaseConfig, {
 		new OptimizeCSSPlugin(),
 		new HtmlWebpackPlugin({
 			filename: buildConfig.build.index,
-			template: pathsConfig.SRC.pathJoin('index.html'),
+			template: path.resolve(pathsConfig.SRC, 'index.html'),
 			inject: true,
 			chunsSortMode: 'dependency'
 		}),

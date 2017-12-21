@@ -33,6 +33,16 @@ function createRequest (path, method, data, callback, errorcallback) {
   })
 }
 
+function combineLyric(lyric, tlyric) {
+  const timeReg = /\[.{8}]/;
+  let lyric_arr = lyric.split('\n')
+  let tlyric_arr = tlyric.split('\n')
+
+  let combine_arr = lyric_arr.map((x) => {
+    // x.timeReg
+  })
+}
+
 function unicode2Words(unicode, littleEndian) {
   if(littleEndian) {
     // littleEndian unicode编码 2个字节顺序倒一下 4E25 => 254E
@@ -50,5 +60,6 @@ function unicode2Words(unicode, littleEndian) {
 
 module.exports = {
   createRequest,
-  unicode2Words
+  unicode2Words,
+  combineLyric
 }
